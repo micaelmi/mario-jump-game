@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import "reset";
+@import "colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+body {
+  background-color: $bg-color;
+}
+
+header {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+}
+
+main {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  border: 1px solid $border-color;
+  margin-inline: auto;
+
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(#05c0d1, #c4e6e9);
+}
+
+.obstacle {
+  width: 80px;
+  position: absolute;
+  bottom: -20px;
+  animation: obstacle-animation 2s linear infinite;
+}
+
+.enemy {
+  width: 50px;
+  position: absolute;
+  bottom: 5px;
+  animation: obstacle-animation 3s linear infinite;
+}
+
+.character {
+  width: 150px;
+  position: absolute;
+  bottom: 15px;
+}
+
+.jump {
+  animation: jump-animation 1s ease infinite;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #0f5a07;
+}
+
+.clouds {
+  width: 300px;
+  position: absolute;
+  top: random(100) + px;
+  animation: clouds-animation 8s linear infinite;
+}
+
+.game-over {
+  display: none;
+
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 20%;
+
+  h2 {
+    font-size: 3.5rem;
+    animation: flash-text-animation 1s infinite;
+  }
+
+  #try-again {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #eeff00;
+    border: 3px solid #000;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ffe100;
+    }
+  }
+  p {
+    margin: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+.alternative {
+  display: none;
+}
+
+@keyframes obstacle-animation {
+  0% {
+    right: -80px;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes clouds-animation {
+  0% {
+    right: -300px;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes jump-animation {
+  0% {
+    bottom: 15px;
+  }
+  40% {
+    bottom: 180px;
+  }
+  50% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 180px;
+  }
+  100% {
+    bottom: 15px;
+  }
+}
+
+@keyframes flash-text-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  main,
+  header {
+    display: none;
+  }
+
+  .alternative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    padding: 1rem;
+    img {
+      width: 150px;
+      margin-left: -40px;
+    }
+    h1 {
+      margin: 1rem;
+    }
+    span {
+      margin: 1rem;
+      font-size: 0.8rem;
+    }
+  }
+}

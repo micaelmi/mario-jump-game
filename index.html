@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mario Jump</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Mario Jump</h1>
+      <p>Distância: <span id="distance">0000</span></p>
+    </header>
+    <main class="game-board">
+      <div class="ground"></div>
+      <img src="./img/clouds.png" alt="Nuvens" class="clouds" />
+      <img src="./img/mario.gif" alt="Personagem" class="character" />
+      <img src="./img/pipe.png" alt="Obstaculo" class="obstacle" />
+      <img src="./img/enemy.png" alt="Inimigo" class="enemy" />
+      <div class="game-over">
+        <h2>Fim de Jogo!</h2>
+        <button id="try-again">Tentar novamente</button>
+        <p>Recorde: <span id="high"></span></p>
+      </div>
+    </main>
+    <section class="alternative">
+      <img src="./img/mario.gif" alt="Mario correndo" />
+      <h1>Jogo Mario Jump</h1>
+      <p>Seu dispositivo é pequeno demais para jogar</p>
+      <span
+        >Tente acessar por um tablet ou computador para se divertir nesse
+        joguinho</span
+      >
+    </section>
+  </body>
+</html>
