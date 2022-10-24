@@ -7,6 +7,8 @@ const clouds = document.querySelector('.clouds')
 const gameOver = document.querySelector('.game-over')
 const tryAgain = document.querySelector('#try-again')
 const highScore = document.querySelector('#high')
+const musicPlayer = document.querySelector('#music')
+const checkMusic = document.querySelector('#check-music')
 let end = false
 let travelledDistance = 0000
 
@@ -26,6 +28,9 @@ const loop = setInterval(() => {
 
     if ((obstaclePosition <= 120 && characterPosition < 80 && obstaclePosition > 0) ||
         (enemyPosition <= 120 && enemyPosition > 0 && characterPosition < 60)) {
+
+        musicPlayer.setAttribute('src', '../audio/game-over-song.mp3')
+        musicPlayer.removeAttribute('loop')
 
         obstacle.style.animation = 'none'
         obstacle.style.left = `${obstaclePosition}px`

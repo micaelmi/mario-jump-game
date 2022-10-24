@@ -96,7 +96,7 @@ main {
 .clouds {
   width: 300px;
   position: absolute;
-  top: 18px;
+  top: 26px;
   -webkit-animation: clouds-animation 8s linear infinite;
           animation: clouds-animation 8s linear infinite;
 }
@@ -140,7 +140,7 @@ footer {
   margin-top: 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 1rem;
   color: #ffffff;
@@ -153,6 +153,16 @@ footer a {
 }
 footer a:hover {
   opacity: 1;
+}
+
+.music-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.music-settings img {
+  width: 24px;
 }
 
 @-webkit-keyframes obstacle-animation {

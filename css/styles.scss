@@ -120,7 +120,7 @@ footer {
   margin-top: 2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 1rem;
   color: $text-color;
@@ -133,6 +133,16 @@ footer {
     &:hover {
       opacity: 1;
     }
+  }
+}
+
+.music-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  img {
+    width: 24px;
   }
 }
 
