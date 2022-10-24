@@ -53,6 +53,7 @@ const loop = setInterval(() => {
 
 
         end = true
+        document.addEventListener('keydown', reloadGame)
         clearInterval(loop)
     }
 }, 10)
@@ -64,9 +65,11 @@ const distanceCounter = setInterval(() => {
     }
 }, 200)
 
+function reloadGame() {
+    window.location.reload()
+}
+
 document.addEventListener('keydown', setJump)
 game.addEventListener('click', setJump)
 
-tryAgain.addEventListener('click', function () {
-    window.location.reload()
-})
+tryAgain.addEventListener('click', reloadGame)
