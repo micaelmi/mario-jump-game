@@ -29,7 +29,7 @@ const loop = setInterval(() => {
     if ((obstaclePosition <= 120 && characterPosition < 80 && obstaclePosition > 0) ||
         (enemyPosition <= 120 && enemyPosition > 0 && characterPosition < 60)) {
 
-        musicPlayer.setAttribute('src', '../audio/game-over-song.mp3')
+        musicPlayer.setAttribute('src', './audio/game-over-song.mp3')
         musicPlayer.removeAttribute('loop')
 
         obstacle.style.animation = 'none'
